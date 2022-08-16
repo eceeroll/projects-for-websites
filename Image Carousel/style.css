@@ -1,0 +1,80 @@
+img {
+    height: 570px;
+}  
+
+.images {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    height: 100vh;
+    position: relative; /* because of we are giving absolute position to child element */
+}
+
+#prev {
+    position: absolute;
+    color: white;
+    /* background-color: black;  */
+    top: 43%;
+    left: 0;
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.8s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+#next {
+    position: absolute;
+    color: white;
+    /* background-color: black;  */
+    top: 43%;
+    right: 0;
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.8s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+.dots {
+    text-align: center;
+    margin: 2%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: gray;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 2px;
+    transition: background-color 0.8s ease;
+}
+
+.active {
+    background-color: black;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from{opacity: -4}
+    to {opacity: 1}
+}
